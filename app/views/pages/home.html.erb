@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="stylesheets/pages.scss" >
+    <title>Welcome to the Lakewood Community Mural Portal!</title>
+  </head>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100" class="">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-success fixed-top">
+
+      <div class="container" >
+
+        <a class="navbar-brand order-1 mr-0" href="hhttps://www.codethedream.org" target="_blank">Presented by Code The Dream</a>
+                <%= image_tag("CTD_Logo_Primary-2.png", border: 0, style:'width:10%') %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#about">About</a>
+            <a class="nav-item nav-link" href="#speakers">Mural Segments</a>
+            <a class="nav-item nav-link" href="#schedule">Sign in</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--    /navbar-->
+    <!--Jumbotron    -->
+    <div class="jumbotron jumbotron-fluid bg-warning text-white background-image: url'../images/ElFu.jpg'"">
+      <div class="container text-sm-center pt-5">
+        <h3 class="display-4"><%=t 'page_title' %></h3>
+        <p class="lead">Inspired, designed and painted by the community!</p>
+
+         <div class="btn-group mt-4" role="group" aria-label="Callout buttons">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">Sign in</button>
+          <a class="btn btn-light btn-lg" href="#speakers"> See Mural Segments</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- /Jumbotron   -->
+    <div class="container pt-4">
+      <!-- about-->
+      <div id="about" class="row">
+        <div class="col-lg order-lg-2">
+          <h3 class="mb-4">Mural Segments</h3>
+          <%= image_tag("bride.jpg", border: 0, style:'width:100%') %>
+          <p>Each beautiful segment of the community mural was inspired by a community member. There was extensive community input!</p>
+          <p>You can let us know what your favorite segment of the mural is. What does it inspire in you?</p>
+        </div>
+        <div class="col-lg order-lg-1">
+          <h3 class="mb-4">About the main Artist</h3>
+          <p><a href="http://corneliocampos.web.unc.edu">Cornelio Campos</a> is a self-taught Mexican-American artist based in Durham, N.C. </p>
+          <p>Vibrant colors, iconic American symbols, and intricate geometric patterns define Mr. Campos’s work. </p>
+          <p>Through his paintings, he illustrates some of the harsh realities of immigrating to America that immigrants often overlook. Moreover, he highlights deep-seated political issues that contribute to Mexican immigration</p>
+          <p>His paintings contain therapeutic, controversial, and enlightening elements that make them both unique and unforgettable.</p>
+        </div>
+         <div class="col-lg order-lg-3">
+          <h3 class="mb-4">Other colaborators</h3>
+          <ul>
+            <li><strong><a href="https://www.zsr.org"> Z Smith Reynolds Foundation</a></strong>: Funder</li>
+            <li><strong><a href="https://elfuturo-nc.org">El Futuro</a></strong>: Grantee and Main organization</li>
+            <li><strong><a href="https://scrapexchange.org">The Scrap Exchange</a></strong>: Property Owner</li>
+            <li><strong><a href="https://elcentronc.org">El Centro Hispano</a></strong>: Community involvement</li>
+            <li><strong>Estephani Sanchez</strong>: Artist Aprentice</li>
+            <li><strong>Sandee Washington</strong>: Past artist</li>
+          </ul>
+        </div>
+      </div><!-- /about -->
+      <!--  Segments    -->
+      <h1 id="speakers" class="display-4 text-center my-5 text-muted">Segments</h1>
+      <!--  speaker goes here-->
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <!--<img src="imgages/20200516_163729-2.jpg" class="card-img-top" alt="Tree"> -->
+              <%= image_tag("tree.jpg", border: 0, style:'width:100%') %>
+            <div class="card-body">
+              <h4 class="card-title">World Tree of Life</h4>
+                <p class="card-text">The world Tree of life displays two hands as roots and treebark holding a green world... what does this inspire you?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+              <%= image_tag("Liberty.jpg", border: 0, style:'width:100%') %>
+            <div class="card-body">
+             <h4 class="card-title">Statue of Liberty</h4>
+             <p class="card-text">"a universal symbol of freedom. Originally conceived as an emblem of the friendship between the people of France and the U.S. and a sign of their mutual desire for liberty, over the years the Statue has become much more.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <%= image_tag("hands.jpg", border: 0, style:'width:100%') %>
+            <img src="hands.jpg" class="card-img-top" alt="Robbie">
+            <div class="card-body">
+              <h4 class="card-title">Hands emerging a rainbow</h4>
+              <p class="card-text">What an amazing feeling of safety,  and welcoming embrace, teh sun offers to all  visitors.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img src="img/ecma.png" class="card-img-top" alt="Ecma">
+            <div class="card-body">
+              <h4 class="card-title">Ecma Scriptnstuff</h4>
+<p class="card-text">Ecma found her passion for programming and teaching over 15 years ago. She is excited to introduce you to all of the wonders of JavaScript.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img src="img/jay.png" class="card-img-top" alt="Jay">
+            <div class="card-body">
+              <h4 class="card-title">Jay Query</h4>
+<p class="card-text">Jay is a developer, author of CSS: The Missing Manual, JavaScript &amp; jQuery: The Missing Manual, and web development teacher.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img src="img/json.png" class="card-img-top" alt="Json">
+            <div class="card-body">
+              <h4 class="card-title">Json Babel</h4>
+              <p class="card-text">All of his professional life, Json has worked with computers online; he is a polyglot programmer and likes using the right tools for the job.</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /speakers -->
+
+      <!--  schedulees here-->
+      <h1 id="schedule" class="display-4 text-center my-5 text-muted">Schedule</h1>
+      <ul class="lsit-group">
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <h5 class="mb-1"> Keynote: Internet of Things </h5>
+            <span class="badge badge-pill badge-info p-2">9:00am</span>
+          </div>
+          <p class="mb-1">NodeStradmus</p>
+        </li>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <h5 class="mb-1"> React Basics </h5>
+            <span class="badge badge-pill badge-info p-2">10:00am</span>
+          </div>
+          <p class="mb-1">Vivianne McVue</p>
+        </li>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <h5 class="mb-1"> Hey, Mongo! </h5>
+            <span class="badge badge-pill badge-info p-2">11:00am</span>
+          </div>
+          <p class="mb-1">Jay Query</p>
+        </li>
+        <li class="list-group-item list-group-item-success">
+          <div class="d-flex justify-content-between">
+            <h5 class="mb-1"> Lunch break </h5>
+            <span class="badge badge-pill badge-info p-2">12:00pm</span>
+          </div>
+          <p class="mb-1">Free pizza everyone</p>
+        </li>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <h5 class="mb-1"> Keynote: Internet of Things </h5>
+            <span class="badge badge-pill badge-info p-2">1:00pm</span>
+          </div>
+          <p class="mb-1">NodeStradmus</p>
+        </li>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <h5 class="mb-1"> Keynote: Internet of Things </h5>
+            <span class="badge badge-pill badge-info p-2">2:00pm</span>
+          </div>
+          <p class="mb-1">NodeStradmus</p>
+        </li>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <h5 class="mb-1"> Keynote: Internet of Things </h5>
+            <span class="badge badge-pill badge-info p-2">3:00pm</span>
+          </div>
+          <p class="mb-1">NodeStradmus</p>
+        </li>
+        </ul>
+
+      <!--    schedules  -->
+
+      <!--callout button-->
+
+      <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">Sign in Now!</button>
+
+       <!-- signup form -->
+      <hr>
+      <div class="row py-4 text-muted">
+        <div class="col-md">
+          <p><strong>About Treehouse</strong></p>
+          <p>Treehouse brings affordable technology education to people everywhere to help them achieve their dreams and change the world.</p>
+        </div>
+        <div class="col-md">
+          <p><strong>Stay up-to-date on Full Stack Conf</strong></p>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Email">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="button">Sign up</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+      <hr><!-- /signup form -->
+      <!-- signup form -->
+
+      <!-- footer -->
+      <div class="row py-3">
+        <div class="col-md-7">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link " href="#">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tracks</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group dropup">
+                <button type="button" class="btn btn-outline-secondary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Other Confs
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">CSS Conf </a>
+                  <a class="dropdown-item" href="#">Python Conf</a>
+                  <a class="dropdown-item" href="#">Java Conf</a>
+
+                  <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="col-md text-md-right">
+          <small>© 2017 Full Stack Conf &amp; Treehouse</small>
+        </div>
+      </div><!-- /footer -->
+     </div> <!--  /.container -->
+<!--=====================================
+     FORM MODAL
+    =====================================-->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="Sign in form" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-info text-white">
+            <h5 class="modal-title" id="exampleModalLabel">Sign in to access as a visitor</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+
+            <!--            Registration form-->
+            <form>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Remember!</strong> Be respectful and keep comments positive.
+                <button type="button" class="close" data-d ismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <div class="form-group">
+              <label for="role">Job Role:</label>
+                <select class="costum-select form-control" id="rome">
+                  <option value="full stack js developer"><%=t 'page_title' %></option>
+                  <option value="front end developer">Front End Developer</option>
+                  <option value="back end developer">Back End Developer</option>
+                  <option value="designer">Designer</option>
+                  <option value="student">Student</option>
+
+                </select>
+              </div>
+
+
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">JavaScript Framework</span>
+                </label>
+              </div>
+
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">JavaScript Library</span>
+                </label>
+              </div>
+
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Node.js</span>
+                </label>
+              </div>
+
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Build Tools</span>
+                </label>
+              </div>
+
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">ES2015</span>
+                </label>
+              </div>
+<!--  PAYMENT INFO-->
+              <h5 class="md=4">Payment Info</h5>
+              <div class="row">
+                <div class="col-lg-6 form-group">
+                  <label for="cc-num">Card Number:</label>
+                  <input class="form-control" id="cc-num" type="text">
+                </div>
+
+                <div class="col-lg form-group">
+                  <label for="zip">Zip Code:</label>
+                  <input class="form-control" id="zip" type="text">
+                </div>
+
+                <div class="col-lg form-group">
+                  <label for="cvv">CVV:</label>
+                  <input class="form-control" id="cvv" type="text">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="col-lg-12">Expiration Date:</label>
+                <div class="form-group col-lg-8">
+                  <select class="custom-select form-control" id="exp-month">
+                    <option value="1">1 - January</option>
+                    <option value="2">2 - February</option>
+                    <option value="3">3 - March</option>
+                    <option value="4">4 - April</option>
+                    <option value="5">5 - May</option>
+                    <option value="6">6 - June</option>
+                    <option value="7">7 - July</option>
+                    <option value="8">8 - August</option>
+                    <option value="9">9 - September</option>
+                    <option value="10">10 - October</option>
+                    <option value="11">11 - November</option>
+                    <option value="12">12 - December</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-lg">
+                  <select class="custom-select form-control" id="exp-year">
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg">Register</button>
+            </form>
+
+
+<!-- /REGISTRATON FORM-->
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+    <p id="notice"><%= notice %></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Something about the mural the mural
+            <div>
+              <iframe width="512" height="332" src="https://player.pbs.org/viralplayer/3038331400/" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" seamless allowfullscreen></iframe>
+            </div>
+          </th>
+          <th>Something about the mural the mural
+            <div>
+              <iframe width="512" height="332" src="https://player.pbs.org/viralplayer/3038331400/" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" seamless allowfullscreen></iframe>
+            </div>
+          </th>
+          <th>Body</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+    </table>
+    <br>
+    <div class=".container-lg">
+      <%= image_tag("mariposa.jpg", border: 0, style:'width:100%') %>
+    </div>
+    <BR>
+    <%= link_to t('new_user'), new_user_path %>
+  </body
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<! LAYOUT HERE!>
+
+
+<html>
+  <head>
+    <title>Mural</title>
+  <!--<title><#%= full_title(yield(:title)) %></title>  -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "sample app", '#', id: "logo" %>
+
+          <nav>
+          <!--  <ul> -->
+          <!--      <li><!--<#%= link_to t('global.menu.home'), root_path %></li> -->
+          <!--      <li><!--<#%= link_to t('global.menu.feedback'), new_feedback_path %></li> -->
+          <!--    </ul> -->
+<!-- LEts the user Decide whcih language to use==== -->
+            <ul>
+              <li><%= link_to 'English', root_path(locale: :en) %></li>
+              <li><%= link_to 'Espanol', root_path(locale: :es) %></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home",    '#' %></li>
+              <li><%= link_to "Help",    '#' %></li>
+              <li><%= link_to "Sign in", '/users/new' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+    <%= yield %>
+  </body>
+</html>

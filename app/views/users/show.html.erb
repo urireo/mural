@@ -1,0 +1,56 @@
+#shows the comments each user has made for each segment of mural
+
+
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>User name:</strong>
+  <%= @user.name %>
+</p>
+<p>
+  <strong>County of Origin:</strong>
+  <%= @user.country %>
+</p>
+<p>
+  <strong>email:</strong>
+  <%= @user.email %>
+</p>
+
+<% if @user.books.present? %>
+  <div id="books">
+    <h1>My Posts</h1>
+    <table>
+      <thead>
+        <tr>
+          <th> Caption </th>
+          <th>Comment</th>
+          <th>Mural Segment</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @user.books.each do |user| %>
+          <tr>
+            <td><%= user.caption %></td>
+            <td><%= user.comment %></td>
+            <td><%= user.segment %></td>
+            <td><%= link_to 'Show', user %></td>
+            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%#= render @user.books %>
+  <% else%>
+    <div>
+      <h3 color="red"> This user has no signed any mural segment yet </h3><br>
+    </div>
+  <% end %>
+  <!-- The `comments` method returns an array-like collection, so we can call `each` on it: -->
+  <%#= render @costumer.orders %>
+  <h2> Add a Comment on a Mural Segment </h2>
+  <!--<#%= render :partial => "books/form", locals: {book: @user.books.new} %> -->
+</div>
+<%= link_to "Home", root_path %> <!--#takes me to Home page -->
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

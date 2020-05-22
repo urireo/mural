@@ -1,0 +1,34 @@
+<%= form_with(model: segment, local: true) do |form| %>
+  <% if segment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(segment.errors.count, "error") %> prohibited this segment from being saved:</h2>
+
+      <ul>
+      <% segment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+<!-- IMAGE STORAGE BELLOW -->
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

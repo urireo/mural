@@ -1,0 +1,23 @@
+show segment here
+<p id="notice"><%= notice %></p>
+
+<div class="field">
+  <p>
+    <strong>Location:</strong>
+    <%= @segment.location %>
+  </p>
+</div>
+
+<div class="field">
+  <p>
+    <strong>Comment:</strong>
+    <%= @segment.description %>
+  </p>
+</div>
+
+<div style="width:400px; height:auto">
+  <%= link_to image_tag(@segment.image, style:'width:100%'), segments_path %>
+</div>
+
+<%= link_to 'Edit', edit_segment_path(@segment) %> |
+<%= link_to 'Back', segments_path %>
